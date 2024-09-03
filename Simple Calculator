@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Codechef
+{
+    public static void main(String[] args)
+    {
+        Scanner obj = new Scanner(System.in);
+        int a = 10;
+        int b = 5;
+        System.out.println("Enter your choice\n1.add\n2.sub\n3.mul\n4.div\n");
+        int choice = obj.nextInt();
+        switch (choice)
+        {
+            case 1:
+                int res = a + b;
+                System.out.println(res);
+                break;
+
+            case 2:
+                res = a - b;
+                System.out.println(res);
+                break;
+
+            case 3:
+                res = a * b;
+                System.out.println(res);
+                break;
+
+            case 4:
+                res = a / b;
+                System.out.println(res);
+                break;
+
+            default:
+                System.out.println("Wrong Choice");
+                break;
+        }
+    }
+}
