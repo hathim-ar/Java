@@ -5,50 +5,62 @@ class Codechef
     public static void main(String[] args)
     {
         Scanner obj = new Scanner(System.in);
-        int pin = 0 ;
-        int CB = 10000 ; 
+        int pin = 0;
+        int CB = 10000;
         int b = 5;
         System.out.println("Enter your choice\n1.Deposit\n2.Withdraw\n3.Check Balance\n4.Change PIN\n");
         int choice = obj.nextInt();
-        
+
         System.out.println("Enter PIN")
-                int x = sc.nextInt();
-                pin += x
+        int x = sc.nextInt();
+        pin += x
 
-    if{(pin == 0000){
-                
-        switch (choice)
-        {
-            case 1: //Deposit
-                System.out.println("Current Balance =" + CB);
-                System.out.println("How much money would you like to Deposit? \n₹");
-                String TopUp = obj.nextInt();
-                CB += Top Up
-                System.out.println("\n\nDeposit Successful \n Current balance = " + CB);
-             
-                break;
+        if {
+            (x == pin) {
 
-            case 2: //Withdraw
-                System.out.println("Current Balance =" + CB);
-                System.out.println("How much money do you want to Withdraw? \n₹");
-                String Swipe = obj.nextInt();
-                if (Swipe<CB) { CB -= Swipe }
-                else { System.out.println("Insufficient Funds"); }
-                
-                System.out.println("\n\nWithdrawal Successful \n Current balance = " + CB);
-                break;
+                switch (choice)
+                {
+                    case 1: //Deposit
+                        System.out.println("Current Balance =" + CB);
+                        System.out.println("How much money would you like to Deposit? \n₹");
+                        int TopUp = obj.nextInt();
+                        CB += Top Up
+                        System.out.println("\n\nDeposit Successful \n Current balance = " + CB);
 
-            case 3: //Check Balance
-               System.out.println("Current Balance =" + CB);
-                break;
+                        break;
 
-            case 4: //Change PIN
-                
+                    case 2: //Withdraw
+                        System.out.println("Current Balance =" + CB);
+                        System.out.println("How much money do you want to Withdraw? \n₹");
+                        int Swipe = obj.nextInt();
+                        if (Swipe < CB) {
+                            CB -= Swipe
+                        }
+                        else {
+                            System.out.println("Insufficient Funds");
+                        }
 
-            default:
-                System.out.println("Wrong Choice");
-                break;
+                        System.out.println("\n\nWithdrawal Successful \n Current balance = " + CB);
+                        break;
+
+                    case 3: //Check Balance
+                        System.out.println("Current Balance =" + CB);
+                        break;
+
+                    case 4: //Change PIN
+                        System.out.println("What do you want to change the PIN into? \n");
+                        int NewPin = obj.nextInt();
+                        pin = NewPin
+
+
+                    default:
+                        System.out.println("Wrong Choice");
+                        break;
+                }
+                else {
+                    System.out.println("Wrong PIN");
+                }
+            }
         }
     }
-}
 }
