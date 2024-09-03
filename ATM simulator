@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+class Codechef
+{
+    public static void main(String[] args)
+    {
+        Scanner obj = new Scanner(System.in);
+        int pin = 0 ;
+        int CB = 10000 ; 
+        int b = 5;
+        System.out.println("Enter your choice\n1.Deposit\n2.Withdraw\n3.Check Balance\n4.Change PIN\n");
+        int choice = obj.nextInt();
+        
+        System.out.println("Enter PIN")
+                int x = sc.nextInt();
+                pin += x
+
+    if{(pin == 0000){
+                
+        switch (choice)
+        {
+            case 1: //Deposit
+                System.out.println("Current Balance =" + CB);
+                System.out.println("How much money would you like to Deposit? \n₹");
+                String TopUp = obj.nextInt();
+                CB += Top Up
+                System.out.println("\n\nDeposit Successful \n Current balance = " + CB);
+             
+                break;
+
+            case 2: //Withdraw
+                System.out.println("Current Balance =" + CB);
+                System.out.println("How much money do you want to Withdraw? \n₹");
+                String Swipe = obj.nextInt();
+                if (Swipe<CB) { CB -= Swipe }
+                else { System.out.println("Insufficient Funds"); }
+                
+                System.out.println("\n\nWithdrawal Successful \n Current balance = " + CB);
+                break;
+
+            case 3: //Check Balance
+               System.out.println("Current Balance =" + CB);
+                break;
+
+            case 4: //Change PIN
+                
+
+            default:
+                System.out.println("Wrong Choice");
+                break;
+        }
+    }
+}
+}
