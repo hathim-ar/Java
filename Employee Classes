@@ -82,4 +82,18 @@ public class Employee {
         System.out.println("Employee Salary: $" + salary);
     }
 }
+public static void main(String[] args) {
+    // Create an Employee object
+    Employee employee = new Employee(101, "John Doe", 50000);
 
+    // Display original details
+    System.out.println("Original Employee Details:");
+    employee.displayDetails();
+
+    System.out.println();
+
+    // Raise salary by 10%
+    System.out.println("After Salary Raise:");
+    employee.raiseSalary(10);
+    employee.displayDetails();
+}
