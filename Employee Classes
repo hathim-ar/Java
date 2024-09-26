@@ -1,0 +1,85 @@
+public class Employee {
+    // Instance variables
+    private int id;
+    private String name;
+    private double salary;
+
+    // Constructor
+    public Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    // Methods (You'll need to implement the raiseSalary method)
+    public void raiseSalary(double percent) {
+        // Calculate the increased salary and update it
+        double increasedSalary = salary * (1 + percent / 100);
+        salary = increasedSalary;
+    }
+
+    // Getters and setters for instance variables (optional)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+}
+// Method to raise salary by a given percentage
+public void raiseSalary(double percent) {
+    double increaseAmount = salary * (percent / 100);
+    salary += increaseAmount;
+}
+
+// Method to display employee details
+public void displayDetails() {
+    System.out.println("Employee Details:");
+    System.out.println("ID: " + id);
+    System.out.println("Name: " + name);
+    System.out.println("Salary: " + salary);
+}
+public class Employee {
+    // Instance variables
+    private int id;
+    private String name;
+    private double salary;
+
+    // Constructor
+    public Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    // Method to raise salary by a given percentage
+    public void raiseSalary(double percent) {
+        double increaseAmount = salary * (percent / 100);
+        salary += increaseAmount;
+    }
+
+    // Method to display employee details
+    public void displayDetails() {
+        System.out.println("Employee ID: " + id);
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Salary: $" + salary);
+    }
+}
+
