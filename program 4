@@ -1,0 +1,82 @@
+public class MyPoint {
+   // Instance variables
+   private int x;
+   private int y;
+ 
+   // Default constructor
+   public MyPoint() {
+       this.x = 0;
+       this.y = 0;
+   }
+ 
+   // Overloaded constructor
+   public MyPoint(int x, int y) {
+       this.x = x;
+       this.y = y;
+   }
+ 
+   // Method to set both x and y
+   public void setXY(int x, int y) {
+       this.x = x;
+       this.y = y;
+   }
+ 
+   // Method to return x and y in a 2-element int array
+   public int[] getXY() {
+       return new int[] {x, y};
+   }
+ 
+   // toString method
+   @Override
+   public String toString() {
+       return "(" + x + ", " + y + ")";
+   }
+ 
+   // Method to calculate distance from this point to another point (x, y)
+   public double distance(int x, int y) {
+       int xDiff = this.x - x;
+       int yDiff = this.y - y;
+       return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+   }
+ 
+   // Method to calculate distance from this point to another MyPoint object
+   public double distance(MyPoint another) {
+       return distance(another.x, another.y);
+   }
+ 
+   // Method to calculate distance from this point to the origin (0,0)
+   public double distance() {
+       return distance(0, 0);
+   }
+}
+public class TestMyPoint {
+   public static void main(String[] args) {
+       // Create MyPoint objects
+       MyPoint point1 = new MyPoint(); // Default constructor
+       MyPoint point2 = new MyPoint(3, 4); // Overloaded constructor
+ 
+       // Display details of point1
+       System.out.println("Point 1 details:");
+       System.out.println("Coordinates: " + point1);
+       System.out.println("Distance from origin: " + point1.distance());
+       System.out.println();
+ 
+       // Display details of point2
+       System.out.println("Point 2 details:");
+       System.out.println("Coordinates: " + point2);
+       System.out.println("Distance from origin: " + point2.distance());
+       System.out.println();
+ 
+       // Set new coordinates for point1
+       point1.setXY(5, 6);
+ 
+       // Display updated details of point1
+       System.out.println("Updated Point 1 details:");
+       System.out.println("Coordinates: " + point1);
+       System.out.println("Distance from origin: " + point1.distance());
+       System.out.println();
+ 
+       // Calculate distance between point1 and point2
+       System.out.println("Distance between Point 1 and Point 2: " + point1.distance(point2));
+   }
+}
